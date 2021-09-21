@@ -8,8 +8,8 @@ namespace StudentInformation
 {
     class Student
     {
-        public int ID { get; set; }
+        public string Phone { get; set; }
         public string Name { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime dateTime { get; set; }
     }
 }

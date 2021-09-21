@@ -34,10 +34,13 @@ namespace StudentInformation
             this.lblBirthD = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lstvInfo = new System.Windows.Forms.ListView();
+            this.datebckerBirthD = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.lstvInfo = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // lblName
@@ -84,32 +87,24 @@ namespace StudentInformation
             this.txtPhone.Size = new System.Drawing.Size(225, 23);
             this.txtPhone.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // datebckerBirthD
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(128, 179);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 23);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // lstvInfo
-            // 
-            this.lstvInfo.HideSelection = false;
-            this.lstvInfo.Location = new System.Drawing.Point(474, 51);
-            this.lstvInfo.Name = "lstvInfo";
-            this.lstvInfo.Size = new System.Drawing.Size(277, 152);
-            this.lstvInfo.TabIndex = 3;
-            this.lstvInfo.UseCompatibleStateImageBehavior = false;
-            this.lstvInfo.View = System.Windows.Forms.View.Details;
+            this.datebckerBirthD.Location = new System.Drawing.Point(128, 179);
+            this.datebckerBirthD.Name = "datebckerBirthD";
+            this.datebckerBirthD.Size = new System.Drawing.Size(225, 23);
+            this.datebckerBirthD.TabIndex = 2;
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.Color.Red;
             this.btnSave.Location = new System.Drawing.Point(400, 273);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(127, 49);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 
@@ -120,6 +115,37 @@ namespace StudentInformation
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // lstvInfo
+            // 
+            this.lstvInfo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.lstvInfo.HideSelection = false;
+            this.lstvInfo.Location = new System.Drawing.Point(435, 40);
+            this.lstvInfo.Name = "lstvInfo";
+            this.lstvInfo.Size = new System.Drawing.Size(318, 194);
+            this.lstvInfo.TabIndex = 3;
+            this.lstvInfo.UseCompatibleStateImageBehavior = false;
+            this.lstvInfo.View = System.Windows.Forms.View.Details;
+            this.lstvInfo.SelectedIndexChanged += new System.EventHandler(this.lstvInfo_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Phone";
+            this.columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "BirthDay";
+            this.columnHeader3.Width = 140;
             // 
             // StudentInfo
             // 
@@ -129,7 +155,7 @@ namespace StudentInformation
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lstvInfo);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.datebckerBirthD);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblBirthD);
@@ -149,10 +175,13 @@ namespace StudentInformation
         private System.Windows.Forms.Label lblBirthD;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ListView lstvInfo;
+        private System.Windows.Forms.DateTimePicker datebckerBirthD;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ListView lstvInfo;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 
